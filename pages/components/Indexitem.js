@@ -2,7 +2,7 @@ import { useRouter } from 'next/router'
 import React from 'react'
 
 export default function indexitem({event}) {
-    const router = useRouter()
+    const Router = useRouter()
   return (
     <div className='w-[60%] bg-white rounded-md flex h-[200px]'>
 
@@ -14,7 +14,7 @@ export default function indexitem({event}) {
           <h3 className='font-bold'>{event.date}</h3>
           <p className='text-gray-400'>{event.description}</p>
           <div className='flex items-end justify-end mt-3'>
-            <button className='text-white bg-green-500 rounded-md py-1 px-1' onClick={()=>router.push('/event/'+event.id)}>Explore Events</button>
+            <button className='text-white bg-green-500 rounded-md py-1 px-1' onClick={()=>Router.push('/event/'+event.id)}>Explore Events</button>
           </div>
         </div>
       </div>
